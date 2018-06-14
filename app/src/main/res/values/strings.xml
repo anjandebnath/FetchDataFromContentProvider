@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FetchDataFromContentProvider</string>
+    <string name="title_activity_cursor_loader">CursorLoaderActivity</string>
 </resources>
