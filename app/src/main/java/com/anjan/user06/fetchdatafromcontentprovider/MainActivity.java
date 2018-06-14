@@ -138,6 +138,24 @@ public class MainActivity extends AppCompatActivity {
                 int UpdateUri = getContentResolver().update(
                         CONTENT_URI, values, whereClause, selectionArgs);
 
+                Toast.makeText(MainActivity.this, "UpdateUri:: "+ UpdateUri, Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String selection = _ID + "=?";
+                String[] selectionArgs = {"1"};
+
+                int del = getContentResolver().delete(
+                        CONTENT_URI, selection, selectionArgs);
+
+                Toast.makeText(MainActivity.this, "UpdateUri:: "+ del, Toast.LENGTH_LONG).show();
+
             }
         });
     }
